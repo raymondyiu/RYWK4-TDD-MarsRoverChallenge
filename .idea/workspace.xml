@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32110daa-7ee8-498d-bfdc-956dc7a4ec76" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Direction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/VehicleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,9 +90,43 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VehicleTest.moveForwardCheckW" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RYWK4-TDD-MarsRoverChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.VehicleTest" />
+      <option name="METHOD_NAME" value="moveForwardCheckW" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehicleTest.turnLeftTestN" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RYWK4-TDD-MarsRoverChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.VehicleTest" />
+      <option name="METHOD_NAME" value="turnLeftTestN" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.VehicleTest" />
+        <item itemvalue="JUnit.VehicleTest.turnLeftTestN" />
+        <item itemvalue="JUnit.VehicleTest.moveForwardCheckW" />
         <item itemvalue="JUnit.PlateauTest" />
       </list>
     </recent_temporary>
