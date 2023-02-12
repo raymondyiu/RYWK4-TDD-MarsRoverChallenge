@@ -37,4 +37,21 @@ public abstract class Vehicle {
         };
         return (currentLocation);
     }
+    public Direction turnLeft(){
+        switch(direction) {
+            case North -> {
+                direction = Direction.West;
+            }
+            case East -> {
+                direction = Direction.North;
+            }
+            case South -> {
+                direction = Direction.East;
+            }
+            case West -> {
+                direction = Direction.South;
+            }
+        };
+        return (currentLocation);
+    }
 }
