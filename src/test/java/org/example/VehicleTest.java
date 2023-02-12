@@ -28,4 +28,9 @@ class VehicleTest {
         Rover rover = new Rover(new Point(1,2), Direction.West);
         assertEquals(new Point(0,2), rover.moveForward());
     }
+
+    void turnLeftTestN() {
+        Rover rover = new Rover(new Point(1,2), Direction.North);
+        assertEquals(Direction.West, rover.turnLeft());
+    }
 }

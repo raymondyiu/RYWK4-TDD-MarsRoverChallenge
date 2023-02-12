@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32110daa-7ee8-498d-bfdc-956dc7a4ec76" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Rover.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rectanglarPlateau.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/VehicleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Plateau.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Plateau.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/PlateauTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/PlateauTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/VehicleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/VehicleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

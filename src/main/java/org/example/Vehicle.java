@@ -52,6 +52,6 @@ public abstract class Vehicle {
                 direction = Direction.South;
             }
         };
-        return (currentLocation);
+        return (direction);
     }
 }
