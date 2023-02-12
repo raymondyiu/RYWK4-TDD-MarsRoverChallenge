@@ -11,9 +11,8 @@ class PlateauTest {
     @Test
     void isInsidePlateau() {
 
-        Plateau plateau = new Plateau(new Point(0,0),new Point(5,5));
+        Plateau plateau = new rectanglarPlateau(new Point(0,0),new Point(5,5));
         assertTrue(plateau.isInsidePlateau(new Point(1,1)));
-
 
     }
 }
