@@ -2,15 +2,19 @@ package org.example;
 
 import java.awt.*;
 
-public class rectanglarPlateau implements Plateau{
+public class RectanglePlateau implements Plateau{
     private Point lowerLeftCorner;
     private Point upperRightCorner;
-    private Point[] retangle = { lowerLeftCorner, upperRightCorner};
+    private Point[] rectangle = { lowerLeftCorner, upperRightCorner};
     private Point[] obstacle=null;
 
-    public rectanglarPlateau(Point lowerLeftCorner, Point upperRightCorner) {
+    public RectanglePlateau(Point lowerLeftCorner, Point upperRightCorner) {
         this.lowerLeftCorner = lowerLeftCorner;
         this.upperRightCorner = upperRightCorner;
+    }
+
+    public Point[] getRectangle(){
+        return rectangle;
     }
 
     public boolean isInsidePlateau(Point currentLocation){
@@ -18,6 +22,6 @@ public class rectanglarPlateau implements Plateau{
     }
     public boolean isObstacle(Point p){
         if ( obstacle == null ) { return false;}
-         return true;
+        return true;
     }
 }
