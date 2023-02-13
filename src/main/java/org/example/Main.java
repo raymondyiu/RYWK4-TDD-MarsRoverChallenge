@@ -37,14 +37,15 @@ public class Main {
             locationScanner.useDelimiter(" ");
 
             rover = new Rover(new Point(locationScanner.nextInt(), locationScanner.nextInt()),
-                    matchDirection(locationScanner.nextLine().trim()));
+                    matchDirection(locationScanner.nextLine().trim().toUpperCase()));
 
-            line = sc.nextLine();
+            line = sc.nextLine().trim().toUpperCase();
             for (int i=0; i<line.length(); i++){
-                switch (line.charAt(i)){
-                    case 'L' -> rover.turnLeft();
-                    case 'R' -> rover.turnRight();
-                    case 'M' -> rover.moveForward();
+                Movements move = Movements.valueOfLabel((new Character(line.charAt(i))).toString());
+                switch (move){
+                    case TurnLeft -> rover.turnLeft();
+                    case TurnRight -> rover.turnRight();
+                    case MoveForward -> rover.moveForward();
                     default -> System.out.println("Action not defined");
                 };
 
