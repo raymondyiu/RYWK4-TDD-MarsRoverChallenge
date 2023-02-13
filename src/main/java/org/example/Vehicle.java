@@ -57,16 +57,16 @@ public abstract class Vehicle {
     public Direction turnRight(){
         switch(direction) {
             case North -> {
-                direction = Direction.West;
+                direction = Direction.East;
             }
             case East -> {
                 direction = Direction.South;
             }
             case South -> {
-                direction = Direction.East;
+                direction = Direction.West;
             }
             case West -> {
-                direction = Direction.South;
+                direction = Direction.North;
             }
         };
         return (direction);

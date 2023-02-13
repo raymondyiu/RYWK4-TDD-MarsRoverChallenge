@@ -106,6 +106,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="VehicleTest.trunRightTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RYWK4-TDD-MarsRoverChallenge" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example" />
+      <option name="MAIN_CLASS_NAME" value="org.example.VehicleTest" />
+      <option name="METHOD_NAME" value="trunRightTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VehicleTest.turnLeftTestN" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RYWK4-TDD-MarsRoverChallenge" />
       <extension name="coverage">
@@ -125,6 +141,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.VehicleTest" />
+        <item itemvalue="JUnit.VehicleTest.trunRightTest" />
         <item itemvalue="JUnit.VehicleTest.turnLeftTestN" />
         <item itemvalue="JUnit.VehicleTest.moveForwardCheckW" />
         <item itemvalue="JUnit.PlateauTest" />

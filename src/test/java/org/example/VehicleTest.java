@@ -42,5 +42,8 @@ class VehicleTest {
     void trunRightTest() {
         Rover rover = new Rover(new Point(1,2), Direction.North);
         assertEquals(Direction.East, rover.turnRight());
+        assertEquals(Direction.South, rover.turnRight());
+        assertEquals(Direction.West, rover.turnRight());
+        assertEquals(Direction.North, rover.turnRight());
     }
 }
