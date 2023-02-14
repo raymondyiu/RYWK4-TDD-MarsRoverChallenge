@@ -18,6 +18,7 @@ turning right, moving forward.
 
 ## Assumptions
 
+
 ## UML Diagram
 
 ![UML Diagram of Mars Rover Challenge](./assets/images/UML-MarsRoverChallenge.drawio.png)
