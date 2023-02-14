@@ -18,11 +18,18 @@ turning right, moving forward.
 
 ## Assumptions
 
+1. The plateau is a square/rectanglar grid
+2. Movement Rules : Rovers move sequentially, this means that the first Rover needs
+to finish moving first before the next one can move
+
 
 ## UML Diagram
 
 ![UML Diagram of Mars Rover Challenge](./assets/images/UML-MarsRoverChallenge.drawio.png)
 
 ## Approaches
+
+1. Apply TDD to test-drive the solution
+2. 
 
 ## Future Thoughts
