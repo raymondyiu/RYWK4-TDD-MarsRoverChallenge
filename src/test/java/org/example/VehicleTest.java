@@ -10,28 +10,38 @@ class VehicleTest {
 
     @Test
     void moveForwardCheckN() {
-        Rover rover = new Rover(new Point(1,2), Direction.North);
+        RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
+                new Point(5,5));
+        Rover rover = new Rover(new Point(1,2), Direction.North, rectanglePlateau);
         assertEquals(new Point(1,3), rover.moveForward());
     }
     @Test
     void moveForwardCheckS() {
-        Rover rover = new Rover(new Point(1,2), Direction.South);
+        RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
+                new Point(5,5));
+        Rover rover = new Rover(new Point(1,2), Direction.South, rectanglePlateau);
         assertEquals(new Point(1,1), rover.moveForward());
     }
     @Test
     void moveForwardCheckE() {
-        Rover rover = new Rover(new Point(1,2), Direction.East);
+        RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
+                new Point(5,5));
+        Rover rover = new Rover(new Point(1,2), Direction.East, rectanglePlateau);
         assertEquals(new Point(2,2), rover.moveForward());
     }
     @Test
     void moveForwardCheckW() {
-        Rover rover = new Rover(new Point(1,2), Direction.West);
+        RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
+                new Point(5,5));
+        Rover rover = new Rover(new Point(1,2), Direction.West, rectanglePlateau);
         assertEquals(new Point(0,2), rover.moveForward());
     }
 
     @Test
     void turnLeftTest() {
-        Rover rover = new Rover(new Point(1,2), Direction.North);
+        RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
+                new Point(5,5));
+        Rover rover = new Rover(new Point(1,2), Direction.North, rectanglePlateau);
         assertEquals(Direction.West, rover.turnLeft());
         assertEquals(Direction.South, rover.turnLeft());
         assertEquals(Direction.East, rover.turnLeft());
@@ -40,10 +50,31 @@ class VehicleTest {
 
     @Test
     void trunRightTest() {
-        Rover rover = new Rover(new Point(1,2), Direction.North);
+        RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
+                new Point(5,5));
+        Rover rover = new Rover(new Point(1,2), Direction.North, rectanglePlateau);
         assertEquals(Direction.East, rover.turnRight());
         assertEquals(Direction.South, rover.turnRight());
         assertEquals(Direction.West, rover.turnRight());
         assertEquals(Direction.North, rover.turnRight());
+    }
+    @Test
+    void BoundaryTest1() {
+        RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
+                new Point(5,5));
+        Rover rover = new Rover(new Point(0,0), Direction.West, rectanglePlateau);
+        assertEquals(new Point(0,0), rover.moveForward());
+        assertEquals(Direction.South, rover.turnLeft());
+        assertEquals(new Point(0,0), rover.moveForward());
+    }
+
+    @Test
+    void BoundaryTest2() {
+        RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
+                new Point(5,5));
+        Rover rover = new Rover(new Point(5,5), Direction.North, rectanglePlateau);
+        assertEquals(new Point(0,0), rover.moveForward());
+        assertEquals(Direction.South, rover.turnLeft());
+        assertEquals(new Point(0,0), rover.moveForward());
     }
 }

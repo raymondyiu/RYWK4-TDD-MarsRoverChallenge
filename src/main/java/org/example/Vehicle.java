@@ -6,10 +6,12 @@ public abstract class Vehicle {
 
     Point currentLocation;
     Direction direction=Direction.North;
+    RectanglePlateau rectanglePlateau;
 
-    public Vehicle(Point currentLocation, Direction direction) {
+    public Vehicle(Point currentLocation, Direction direction, RectanglePlateau rectanglePlateau) {
         this.currentLocation = currentLocation;
         this.direction = direction;
+        this.rectanglePlateau = rectanglePlateau;
     }
 
     public Point getCurrentLocation() {
@@ -21,20 +23,26 @@ public abstract class Vehicle {
     }
 
     public Point moveForward(){
+        Point nextPoint = new Point(0,0);
         switch(direction) {
             case North -> {
-                currentLocation.setLocation(currentLocation.getX(), currentLocation.getY()+1);
+                nextPoint.setLocation(currentLocation.getX(), currentLocation.getY()+1);
             }
             case East -> {
-                currentLocation.setLocation(currentLocation.getX()+1, currentLocation.getY());
+                nextPoint.setLocation(currentLocation.getX()+1, currentLocation.getY());
             }
             case South -> {
-                currentLocation.setLocation(currentLocation.getX(), currentLocation.getY()-1);
+                nextPoint.setLocation(currentLocation.getX(), currentLocation.getY()-1);
             }
             case West -> {
-                currentLocation.setLocation(currentLocation.getX()-1, currentLocation.getY());
+                nextPoint.setLocation(currentLocation.getX()-1, currentLocation.getY());
             }
         };
+        if (rectanglePlateau.isInsidePlateau(nextPoint)){
+            currentLocation.setLocation(nextPoint);
+        } else {
+            System.out.println("Out of Boundary");
+        }
         return (currentLocation);
     }
     public Direction turnLeft(){

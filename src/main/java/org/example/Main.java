@@ -5,19 +5,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static Direction matchDirection(String directionStr){
-
-        Direction out;
-        switch (directionStr.charAt(0)) {
-                    case 'N' -> out = Direction.North;
-                    case 'E' -> out = Direction.East;
-                    case 'S' -> out = Direction.South;
-                    case 'W' -> out = Direction.West;
-                    default -> out = Direction.North;
-        };
-
-        return out;
-    }
     public static void main(String[] args) {
         String line;
         Scanner sc = new Scanner(System.in);
@@ -37,7 +24,8 @@ public class Main {
             locationScanner.useDelimiter(" ");
 
             rover = new Rover(new Point(locationScanner.nextInt(), locationScanner.nextInt()),
-                    matchDirection(locationScanner.nextLine().trim().toUpperCase()));
+                    Direction.valueOfLabel(locationScanner.nextLine().trim().toUpperCase()),
+                    rectanglePlateau);
 
             line = sc.nextLine().trim().toUpperCase();
             for (int i=0; i<line.length(); i++){
@@ -50,7 +38,7 @@ public class Main {
                 };
 
             }
-            System.out.println(String.format("%.0f %.0f %c", rover.getCurrentLocation().getX(),
+            System.out.println(String.format("%.0f %.0f %s", rover.getCurrentLocation().getX(),
                     rover.getCurrentLocation().getY(), rover.getDirection().value()));
         }
     }
