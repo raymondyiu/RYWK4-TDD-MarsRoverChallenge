@@ -15,6 +15,7 @@ and facing a certain direction eg. North
 3. To instruct the Rover to move in a specific direction using actions such as turning left,
 turning right, moving forward.
 4. Boundary checking
+5. Command line interface
 
 
 ## Assumptions
