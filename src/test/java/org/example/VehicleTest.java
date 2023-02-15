@@ -73,8 +73,8 @@ class VehicleTest {
         RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0),
                 new Point(5,5));
         Rover rover = new Rover(new Point(5,5), Direction.North, rectanglePlateau);
-        assertEquals(new Point(0,0), rover.moveForward());
-        assertEquals(Direction.South, rover.turnLeft());
-        assertEquals(new Point(0,0), rover.moveForward());
+        assertEquals(new Point(5,5), rover.moveForward());
+        assertEquals(Direction.East, rover.turnRight());
+        assertEquals(new Point(5,5), rover.moveForward());
     }
 }
