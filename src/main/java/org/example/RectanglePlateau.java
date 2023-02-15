@@ -1,6 +1,7 @@
 package org.example;
 
 import java.awt.*;
+import java.util.Scanner;
 
 public class RectanglePlateau implements Plateau{
     private Point lowerLeftCorner;
@@ -25,4 +26,5 @@ public class RectanglePlateau implements Plateau{
         }
         return true;
     }
+
 }

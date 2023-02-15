@@ -14,10 +14,12 @@ public class Main {
         Scanner moveScanner;
         Rover rover;
 
-        plateauScanner = new Scanner(sc.nextLine());
-        plateauScanner.useDelimiter(" ");
-        rectanglePlateau = new RectanglePlateau(new Point(0,0),
-                new Point(plateauScanner.nextInt(), plateauScanner.nextInt()));
+
+            plateauScanner = new Scanner(sc.nextLine());
+            plateauScanner.useDelimiter(" ");
+            rectanglePlateau = new RectanglePlateau(new Point(0, 0),
+                    new Point(plateauScanner.nextInt(), plateauScanner.nextInt()));
+
 
         while(sc.hasNextLine()){
             locationScanner = new Scanner(sc.nextLine());
