@@ -7,7 +7,6 @@ public class RectanglePlateau implements Plateau{
     private Point lowerLeftCorner;
     private Point upperRightCorner;
     private Point[] rectangle;
-    private Point[] obstacle=null;
 
     public RectanglePlateau(Point lowerLeftCorner, Point upperRightCorner) {
         this.lowerLeftCorner = lowerLeftCorner;

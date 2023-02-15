@@ -14,14 +14,6 @@ public abstract class Vehicle {
         this.rectanglePlateau = rectanglePlateau;
     }
 
-    public Point getCurrentLocation() {
-        return currentLocation;
-    }
-
-    public Direction getDirection() {
-        return direction;
-    }
-
     public Point moveForward(){
         Point nextPoint = new Point(0,0);
         switch(direction) {
