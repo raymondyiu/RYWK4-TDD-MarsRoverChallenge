@@ -26,7 +26,7 @@ to finish moving first before the next one can move
 
 ## UML Diagram
 
-![UML Diagram of Mars Rover Challenge](./assets/images/UML-MarsRoverChallenge.drawio.png)
+![UML Diagram of Mars Rover Challenge](./assets/images/UML-MarsRoverProject.drawio.png)
 
 ## Approaches
 
