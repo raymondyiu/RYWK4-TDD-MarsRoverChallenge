@@ -13,8 +13,11 @@ public class Main {
         Scanner locationScanner;
         Scanner moveScanner;
         Rover rover;
+        Point rightCorner=null;
 
+        //while (rightCorner == null) {
 
+        //}
             plateauScanner = new Scanner(sc.nextLine());
             plateauScanner.useDelimiter(" ");
             rectanglePlateau = new RectanglePlateau(new Point(0, 0),
