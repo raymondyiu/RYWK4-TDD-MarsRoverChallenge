@@ -12,39 +12,40 @@ public class Main {
         RectanglePlateau rectanglePlateau;
         Scanner locationScanner;
         Scanner moveScanner;
-        Rover rover;
+        Rover rover=null;
         Point rightCorner=null;
+        Userinput userinput = new Userinput();
+        rightCorner = userinput.getCoordinate(sc.nextLine());
+        while (rightCorner == null) {
+            System.out.println("Invalid input! Please input eg 5 5 for create a Plateau");
+            rightCorner = userinput.getCoordinate(sc.nextLine());
+        }
+        rectanglePlateau = new RectanglePlateau(new Point(0, 0), rightCorner);
 
-        //while (rightCorner == null) {
+        while (true) {
+            rover = userinput.getLocationDirection(sc.nextLine(), rectanglePlateau);
+            while (rover == null) {
+                System.out.println("Invalid input! Please input eg 1 2 N for rover location and direction");
+                rover = userinput.getLocationDirection(sc.nextLine(), rectanglePlateau);
+            }
 
-        //}
-            plateauScanner = new Scanner(sc.nextLine());
-            plateauScanner.useDelimiter(" ");
-            rectanglePlateau = new RectanglePlateau(new Point(0, 0),
-                    new Point(plateauScanner.nextInt(), plateauScanner.nextInt()));
-
-
-        while(sc.hasNextLine()){
-            locationScanner = new Scanner(sc.nextLine());
-            locationScanner.useDelimiter(" ");
-
-            rover = new Rover(new Point(locationScanner.nextInt(), locationScanner.nextInt()),
-                    Direction.valueOfLabel(locationScanner.nextLine().trim().toUpperCase()),
-                    rectanglePlateau);
-
-            line = sc.nextLine().trim().toUpperCase();
-            for (int i=0; i<line.length(); i++){
+            line = userinput.getInstruction(sc.nextLine());
+            while (line == null) {
+                System.out.println("Invalid input! Please input eg LMLM for rover moving intructions");
+                line = userinput.getInstruction(sc.nextLine());
+            }
+            for (int i = 0; i < line.length(); i++) {
                 Movements move = Movements.valueOfLabel((new Character(line.charAt(i))).toString());
-                switch (move){
+                switch (move) {
                     case TurnLeft -> rover.turnLeft();
                     case TurnRight -> rover.turnRight();
                     case MoveForward -> rover.moveForward();
                     default -> System.out.println("Action not defined");
-                };
+                }
+                ;
 
             }
-            System.out.println(String.format("%.0f %.0f %s", rover.getCurrentLocation().getX(),
-                    rover.getCurrentLocation().getY(), rover.getDirection().value()));
+            System.out.println(rover.toString());
         }
     }
 }
