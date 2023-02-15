@@ -36,5 +36,7 @@ class UserinputTest {
 
     @Test
     void getInstruction() {
+        Userinput userinput = new Userinput();
+        assertEquals("LLMR", userinput.getInstruction("LLMM"));
     }
 }
