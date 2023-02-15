@@ -79,4 +79,8 @@ public abstract class Vehicle {
         };
         return (direction);
     }
+    public String toString(){
+        return (String.format("%.0f %.0f %s", currentLocation.getX(), currentLocation.getY(),
+                direction.value()));
+    }
 }
