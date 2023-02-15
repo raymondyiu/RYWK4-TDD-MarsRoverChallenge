@@ -23,9 +23,15 @@ class UserinputTest {
     void getLocationDirection() {
         Userinput userinput = new Userinput();
         RectanglePlateau rectanglePlateau = new RectanglePlateau(new Point(0,0), new Point(5,5));
-        Rover expectedRover = new Rover(new Point(0,0), Direction.North, rectanglePlateau);
+        Rover expectedRover = new Rover(new Point(1,2), Direction.North, rectanglePlateau);
         assertEquals(expectedRover.toString(),
-                (userinput.getLocationDirection("1 2 N", rectanglePlateau).toString()));
+                (userinput.getLocationDirection("1 2 N", rectanglePlateau)).toString());
+        assertEquals(null,
+                userinput.getLocationDirection("a 2 N", rectanglePlateau));
+        assertEquals(null,
+                userinput.getLocationDirection("0 -1 N", rectanglePlateau));
+        assertEquals(null,
+                userinput.getLocationDirection("abc", rectanglePlateau));
     }
 
     @Test
