@@ -14,7 +14,7 @@ of navigating and exploring the Martian landscape.
 and facing a certain direction eg. North
 3. To instruct the Rover to move in a specific direction using actions such as turning left,
 turning right, moving forward.
-4. Boundary checking
+4. Boundary checking - location of rover outside the Plateau and move outside the boundary
 5. Command line interface
 
 
