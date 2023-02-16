@@ -33,6 +33,8 @@ public class Userinput {
             int y = scanner.nextInt();
             if (y < 0) return null;
 
+            if (!rectanglePlateau.isInsidePlateau(new Point(x,y))) return null;
+
             direction = Direction.valueOfLabel(scanner.nextLine().trim().toUpperCase());
             if (direction == null) return null;
             rover = new Rover(new Point(x,y), direction, rectanglePlateau);
@@ -44,6 +46,6 @@ public class Userinput {
     }
 
     public String getInstruction(String line){
-        return (Pattern.matches("[LRM]+", line.trim().toUpperCase())) ? line : null;
+        return (Pattern.matches("[LRM]+", line.trim().toUpperCase())) ? line.trim().toUpperCase() : null;
     }
 }

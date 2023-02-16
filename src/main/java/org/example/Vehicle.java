@@ -33,7 +33,7 @@ public abstract class Vehicle {
         if (rectanglePlateau.isInsidePlateau(nextPoint)){
             currentLocation.setLocation(nextPoint);
         } else {
-            System.out.println("Out of Boundary");
+            System.out.println("Rover> Out of Boundary");
         }
         return (currentLocation);
     }

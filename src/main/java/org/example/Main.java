@@ -17,7 +17,7 @@ public class Main {
         Userinput userinput = new Userinput();
         rightCorner = userinput.getCoordinate(sc.nextLine());
         while (rightCorner == null) {
-            System.out.println("Invalid input! Please input eg 5 5 for create a Plateau");
+            System.out.println("Plateau>Invalid input! Please input eg 5 5 for create a Plateau");
             rightCorner = userinput.getCoordinate(sc.nextLine());
         }
         rectanglePlateau = new RectanglePlateau(new Point(0, 0), rightCorner);
@@ -25,13 +25,13 @@ public class Main {
         while (true) {
             rover = userinput.getLocationDirection(sc.nextLine(), rectanglePlateau);
             while (rover == null) {
-                System.out.println("Invalid input! Please input eg 1 2 N for rover location and direction");
+                System.out.println("Rover>Invalid input! Please input eg 1 2 N for rover location and direction");
                 rover = userinput.getLocationDirection(sc.nextLine(), rectanglePlateau);
             }
 
             line = userinput.getInstruction(sc.nextLine());
             while (line == null) {
-                System.out.println("Invalid input! Please input eg LMLM for rover moving intructions");
+                System.out.println("Rover>Invalid input! Please input eg LMLM for rover moving intructions");
                 line = userinput.getInstruction(sc.nextLine());
             }
             for (int i = 0; i < line.length(); i++) {
@@ -40,12 +40,12 @@ public class Main {
                     case TurnLeft -> rover.turnLeft();
                     case TurnRight -> rover.turnRight();
                     case MoveForward -> rover.moveForward();
-                    default -> System.out.println("Action not defined");
+                    default -> System.out.println("Rover>Action not defined");
                 }
                 ;
 
             }
-            System.out.println(rover.toString());
+            System.out.println("Rover> " + rover.toString());
         }
     }
 }
